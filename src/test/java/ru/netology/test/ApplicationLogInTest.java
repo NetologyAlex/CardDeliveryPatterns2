@@ -27,6 +27,9 @@ public class ApplicationLogInTest {
         $("h2").shouldHave(text("Личный кабинет"));
     }
 
+    private void generateValidUser() {
+    }
+
     @Test
     void shouldShowUserAsBlocked() {
         val RequestData = generateBlockedUser();
