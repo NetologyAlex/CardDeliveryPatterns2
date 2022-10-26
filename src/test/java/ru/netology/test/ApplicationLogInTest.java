@@ -20,7 +20,8 @@ public class ApplicationLogInTest {
 
     @Test
     void shouldLogIn() {
-        val RequestData = generateValidUser();
+
+        void RequestData = generateValidUser();
         $("[data-test-id='login'] [name='login']").setValue(RequestData.getLogin());
         $("[data-test-id='password'] [name='password']").setValue(RequestData.getPassword());
         $("[data-test-id='action-login'] [class='button__text']").click();

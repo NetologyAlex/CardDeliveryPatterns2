@@ -47,14 +47,16 @@ public class DataGenerator {
     }
 
 
-    public static RequestData generateBlockedUser(String status) {
+    public static RequestData generateBlockedUser() {
         Faker faker = new Faker(new Locale("en"));
         String login = faker.name().username();
         String password = faker.internet().password();
+        String status = new String();
         RequestData data = new RequestData(login, password, status);
         register(data);
         return data;
     }
+
 
     public static RequestData generateUserWithInvalidPassword() {
         Faker faker = new Faker(new Locale("en"));
